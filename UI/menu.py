@@ -59,16 +59,15 @@ def set_frame_info(root: Tk):
     w, h = math.ceil(root.winfo_screenwidth() * 0.8), math.ceil(root.winfo_screenheight() * 0.8)
     geom = f"{w}x{h}"
     root.geometry(geom)
-    root.title("Hand-Haven")
+    root.title("Sign-Collaborative")
     # set_icon(root)
     root.resizable(False, False)  # this can be changed
 
 
 def set_text_label(root: Tk):
     text1 = "About The Authors"
-    text2 = "A rag tag team of misfits who occasionally commit the sin of touching grass\n" \
-            "coming to you as the makers of famous 210 projects like Swim-Team Management, Course Management, " \
-            "\n Quiz Builder and Prescriptify!"
+    text2 = "A humble team of students trying their best to contribute to society\n" \
+            
     tk_label1 = Label(root, text=text1, fg="#000000",  bg="#daf5f3", font=("Comic Sans", 30))
     tk_label2 = Label(root, text=text2, fg="#000000", bg="#daf5f3", font=("Comic Sans", 20))
     tk_label1.grid(row=0, column=0, columnspan=3, sticky="nsew")
