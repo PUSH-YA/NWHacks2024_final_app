@@ -59,7 +59,7 @@ def set_frame_info(root: Tk):
     w, h = math.ceil(root.winfo_screenwidth() * 0.8), math.ceil(root.winfo_screenheight() * 0.8)
     geom = f"{w}x{h}"
     root.geometry(geom)
-    root.title("Hand-Haven")
+    root.title("Sign-Collaborative")
     # set_icon(root)
     root.resizable(False, False)  # this can be changed
 
