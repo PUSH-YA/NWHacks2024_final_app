@@ -10,6 +10,7 @@ import pyttsx3
 import threading
 import numpy as np
 import speech_recognition as sr
+from UI import menu
 
 
 
@@ -66,6 +67,10 @@ while True:
 
 class App:
 
+    def go_back(self):
+        self.window.destroy()
+        menu.Calculator()
+
     def __init__(self):
         # initialising voice engine
         self.voice = pyttsx3.init()
@@ -78,6 +83,7 @@ class App:
         self.text = "hello"
 
         self.window = Tk()
+        self.window.protocol("WM_DELETE_WINDOW", self.go_back)
 
         photo1 = PhotoImage(file = os.path.join(os.getcwd(), "image-30x30.jpg")) 
         self.speechbutton = Button(self.window,image=photo1, command=self.speak)

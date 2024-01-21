@@ -101,7 +101,7 @@ def set_buttons(root: Tk):
                      bg="#daf5f3", width=w//2, height=5, highlightbackground="#daf5f3", fg="#000000",
                      font=("Comic Sans", 20))
 
-    try_two = Button(root, text="Try me! \n English to ASL", command=lambda: root.destroy(),
+    try_two = Button(root, text="Try me! \n English to ASL", command=lambda: startaslSpeech(root),
                      bg="#daf5f3", width=w//2, height=5, highlightbackground="#daf5f3", fg="#000000",
                      font=("Comic Sans", 20))
 
@@ -121,6 +121,10 @@ def set_buttons(root: Tk):
 def startaslText(root):
     root.destroy()
     aslText.App()
+
+def startaslSpeech(root):
+    root.destroy()
+    speechASL.App()
 
 # template code to create buttons
 def create_button(root: Tk, **kwargs):

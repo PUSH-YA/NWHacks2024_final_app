@@ -9,8 +9,13 @@ import joblib
 import pyttsx3
 import threading
 import numpy as np
+from UI import menu
 
 class App:
+
+    def go_back(self):
+        self.window.destroy()
+        menu.Calculator()
 
     def __init__(self):
         # initialising voice engine
@@ -20,6 +25,7 @@ class App:
         self.voice.setProperty('voice', self.voice.getProperty("voices")[1].id) # 0 for male, 1 for female
 
         self.window = Tk()
+        self.window.protocol("WM_DELETE_WINDOW", self.go_back)
 
         self.window.title = "ASL to Text/Speech"
 
